@@ -20,4 +20,12 @@ class system_manager:
         self.staff_repo.create(staff)
     def add_patient(self, patient : patient):
         self.patient_repo.create(patient)
+    def update_hospital(self, hospital : hospital):
+        self.hospital_repo.update(hospital)
+    def update_department(self, department : department):
+        self.department_repo.update(department)
+    def update_staff(self, staff : staff):
+        self.staff_repo.update(staff)
+    def update_patient(self, patient : patient):
+        self.patient_repo.update(patient)
     

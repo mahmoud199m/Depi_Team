@@ -1,6 +1,7 @@
 from domain.Person import person
 class staff(person):
-    def __init__(self, name: str, age: int, phone: str, dep_id: int = 0, position: str = "", address: str = ""):
+    def __init__(self, name: str, age: int, phone: str, dep_id: int = 0, position: str = "", address: str = "",stf_id: int = 0):
+        self.stf_id = stf_id
         super().__init__(name, age, phone, dep_id)
         self.position = position
         self.address = address

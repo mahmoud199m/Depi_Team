@@ -9,4 +9,11 @@ class hospital_repo:
             (hospital.name, hospital.location)
         )
         self.conn.commit()
+
+    def update(self, hospital : hospital):
+        self.cur.execute(
+            "UPDATE hospitals SET hos_name = %s, hos_location = %s WHERE hos_id = %s;",
+            (hospital.name, hospital.location, hospital.hos_id)
+        )
+        self.conn.commit()
      

@@ -12,3 +12,9 @@ class department_repo:
             (department.name, department.hos_id)
         )
         self.conn.commit()
+    def update(self, department : department):
+        self.cur.execute(
+            "UPDATE departments SET dep_name = %s, hos_id = %s WHERE dep_id = %s;",
+            (department.name, department.hos_id, department.dep_id)
+        )
+        self.conn.commit()

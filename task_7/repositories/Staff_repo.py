@@ -10,3 +10,10 @@ class staff_repo:
             (staff.name, staff.age, staff.phone, staff.position, staff.address, staff.dep_id)
         )
         self.conn.commit()
+    
+    def update(self, staff : staff):
+        self.cur.execute(
+            "UPDATE staffs SET stf_name = %s, stf_age = %s, stf_phone = %s, stf_position = %s, stf_address = %s, dep_id = %s WHERE stf_id = %s;",
+            (staff.name, staff.age, staff.phone, staff.position, staff.address, staff.dep_id, staff.stf_id)
+        )
+        self.conn.commit()
